@@ -14,7 +14,7 @@ let madLib = [
   ' wife.'
 ];
 let product = '';
-const button = document.getElementById('button');
+const button = document.getElementById('start-button');
 
 function doMadLib() {
   for (let i = 0; i < neededInput.length; i++) {
@@ -27,6 +27,7 @@ function doMadLib() {
   var text = document.createTextNode(product);
   p.appendChild(text);
   document.getElementById("mad-lib-generated").appendChild(p);
+  product = '';
 }
 
 button.addEventListener("click", doMadLib, false);
