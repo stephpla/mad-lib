@@ -1,15 +1,27 @@
 body {
   background-color: #668cff;
-
+  padding-top: 8px;
 
 }
 
 .page-content {
   background-color: #e6ecff;
   width: 80%;
+  margin: 0 auto;
+  min-height: calc(100% - 8px);
+
 }
 
 h1 {
   text-align: center;
   padding-top: 5%;
+}
+
+.intro-text,
+.mad-lib-generated {
+  padding: 0 5%;
+}
+
+#button {
+  padding: 10px 20px;
 }
