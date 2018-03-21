@@ -1,26 +1,26 @@
-console.log("The script linked properly");
+
+document.getElementById("answer-area").style.visibility = "hidden";
+
 
 const question = 'Please provide a';
-let neededInput = [
-  'n exclamation',
-  'n adverb',
-  ' noun',
-  ' adjective'
+let data = [
+  ['n exclamation', '(Wow!, Oh!, Yuck!)', '! he said '],
+  ['n adverb', 'An action', ' as he jumped into his convertible '],
+  [' noun', 'person, place or thing', ' and drove off with his '],
+  [' adjective', 'A describing word', ' wife.']
 ];
-let madLib = [
-  '! he said ',
-  ' as he jumped into his convertible ',
-  ' and drove off with his ',
-  ' wife.'
-];
+
 let product = '';
-const button = document.getElementById('start-button');
+const startButton = document.getElementById('start-button');
+const enterButton = document.getElementById('enterButton');
+const questionSpan = document.querySelector('#question-span');
+const textArea = document.querySelector('textarea');
 
 function doMadLib() {
-  for (let i = 0; i < neededInput.length; i++) {
-    let answer = prompt(question+neededInput[i]);
-    product += answer + madLib[i];
-  }
+  questionSpan.innerHTML = question + data[0][0];
+  textArea.setAttribute('placeholder', data[0][1]);
+  document.getElementById("answer-area").style.visibility = "visible";
+
   console.log(product);
 
   var p = document.createElement("P");
@@ -30,4 +30,4 @@ function doMadLib() {
   product = '';
 }
 
-button.addEventListener("click", doMadLib, false);
+startButton.addEventListener("click", doMadLib, false);

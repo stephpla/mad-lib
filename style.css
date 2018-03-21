@@ -23,7 +23,8 @@ h1 {
 }
 
 .intro-text,
-#mad-lib-generated {
+#mad-lib-generated,
+#answer-area {
   padding: 0 5%;
 }
 
@@ -35,6 +36,11 @@ h1 {
   text-align: center;
   /* width: 50%; */
 
+}
+
+#question-span {
+  display: block;
+  font-size: 1.4em;
 }
 
 button {
