@@ -1,7 +1,7 @@
 const question = 'Please provide a';
 let data = [
   ['n exclamation', '(Wow!, Oh!, Yuck!)', '! he said '],
-  ['n adverb', 'An action', ' as he jumped into his convertible '],
+  ['n adverb', 'A description of an action (-ly)', ' as he jumped into his convertible '],
   [' noun', 'person, place or thing', ' and drove off with his '],
   [' adjective', 'A describing word', ' wife.']
 ];
@@ -54,6 +54,7 @@ function executeMadLib() {
 
 function clearPage() {
   madLib.innerHTML = '';
+  clearButton.style.visibility = "hidden";
 }
 
 startButton.addEventListener("click", launchMadLib, false);
